@@ -9,30 +9,61 @@ level = 1
 enabled = false
 
 [net]
-tickrate = 30
+tickrate = 60
 port = 1212
 bindto = "::,0.0.0.0"
 max_connections = 256
-# Automatic port forwarding!
-# Disabled by default because you may not want to do this.
 # upnp = true
-
-[status]
-# The status server is the TCP side, used by the launcher to determine engine version, etc.
-# To be clear: Disabling it makes the launcher unable to connect!
-enabled = true
-
-# This is the address and port the status server binds to.
-# The port is by default set based on net.port so it will follow what you set there.
-# bind = "*:1212"
-
-# This is the address of the SS14 server as the launcher uses it.
-# This is only needed if you're proxying the status HTTP server -
-#  by default the launcher will assume the address and port match that of the status server.
 # connectaddress = "udp://localhost:1212"
 
 [game]
-hostname = "MyServer"
+hostname = "🕋 PROJECT UTOPIA 🕋✅[TTS][HRP]"
+desc = "Погрузитесь в мрачную антиутопичную атмосферу проекта Утопии!.\n🔮 Сервер основан на сборке WizardStation с внесёнными модификациями и дополнениями!\n🔮 На сервере приветствуются повышенные требования к RP.\n🔮 Имеется своя поддержка TTS (Text-To-Speech).\n💡 Подробнее о проекте узнайте в нашем дискорде!"
+maxplayers = 50
+soft_max_players = 30
+lobbyenabled     = true
+map_rotation = true
+
+[infolinks]
+bug_report = "https://discord.gg/HWwzygVsHA"
+discord    = "https://discord.gg/WkQJYJ7Gvh"
+
+[movement]
+mob_pushing = false
+
+[server]
+rules_file = "StandardRuleset"
+lobby_name = "️🕋 PROJECT UTOPIA 🕋✅"
+
+[game.panic_bunker]
+enabled = true
+show_reason = true
+min_account_age = 0
+min_overall_minutes = 0
+deny_vpn = true
+enable_without_admins = true
+disable_with_admins = true
+
+[admin]
+see_own_notes = true
+deadmin_on_join = true
+new_player_threshold = 600
+alert.min_players_sharing_connection = 2
+allow_multi_server_play = false
+
+[vote]
+restart_required_ratio = 0.7
+
+[rules]
+time = 180.0
+
+[status]
+enabled = true
+bind = "38.180.111.229:1212"
+
+[hub]
+advertise = true
+tags = "lang:ru,rp:high,region:ru_r,tts"
 
 [console]
 # If this is true, people connecting from this machine (loopback)
@@ -40,19 +71,19 @@ hostname = "MyServer"
 # This literally works by checking if address == 127.0.0.1 || address == ::1
 loginlocal = true
 
-[hub]
+# [hub]
 # Set to true to show this server on the public server list
 # Before enabling this, read: https://docs.spacestation14.io/hosts/hub-rules
 advertise = false
 # Comma-separated list of tags, useful for categorizing your server.
 # See https://docs.spacestation14.io/hosts/hub-rules for more details on this when it becomes relevant.
-tags = ""
+# tags = ""
 # URL of your server. Fill this in if you have a domain name,
 # want to use HTTPS (with a reverse proxy), or other advanced scenarios.
 # Must be in the form of an ss14:// or ss14s:// URI pointing to the status API.
 server_url = ""
 # Comma-separated list of URLs of hub servers to advertise to.
-hub_urls = "https://hub.spacestation14.com/"
+# hub_urls = "https://hub.spacestation14.com/"
 
 [build]
 # *Absolutely all of these can be supplied using a "build.json" file*
@@ -94,7 +125,7 @@ hub_urls = "https://hub.spacestation14.com/"
 # mode = 0
 
 # If true, even if authentication is required, localhost is still allowed to login directly regardless.
-# allowlocal = true
+allowlocal = true
 
 # You should probably never EVER need to touch this, but if you need a custom auth server,
 # (the auth server being the one which manages Space Station 14 accounts), you change it here.
